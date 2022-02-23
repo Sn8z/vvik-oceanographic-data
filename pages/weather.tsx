@@ -24,20 +24,20 @@ import { Line } from 'react-chartjs-2';
     Filler
  );
 
-export default function Weather({ weather }) {
+export default function Weather({ weather }: any) {
 
     const options = {
         responsive: true,
         maintainAspectRatio: false
       };
       
-      const labels = weather.value.map((v) => new Date(v.date).toLocaleString());
+      const labels = weather.value.map((v: any) => new Date(v.date).toLocaleString());
       const data = {
         labels,
         datasets: [
           {
             label: weather.parameter.name + " (" + weather.parameter.unit + ")",
-            data: weather.value.map((v) => v.value ),
+            data: weather.value.map((v: any) => v.value ),
             backgroundColor: '#0A9396',
             fill: true,
             borderColor: "#F8F8F8",
@@ -59,7 +59,7 @@ export default function Weather({ weather }) {
     )
 }
 
-export async function getServerSideProps(): any {
+export async function getServerSideProps() {
     const res = await getLatestDay();
     return {
         props: { weather: res }

@@ -1,9 +1,9 @@
-export default function About({ planets }) {
+export default function About({ planets }: any) {
     return (
         <>
             <h1>Planets</h1>
             <p>{ JSON.stringify(planets) }</p>
-            {planets.map((planet) => (
+            {planets.map((planet: any) => (
                 <p>{ planet.name }</p>
             ))}
         </>
