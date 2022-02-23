@@ -14,7 +14,7 @@ export default function Navbar() {
       <Link href="/about">
         <a>About Us</a>
       </Link>
-      <Image src={ logo } width={50} height={50}/>
+      <Image src={ logo } width={50} height={50} alt="Logo"/>
       <Link href="/weather">
         <a>Weather</a>
       </Link>      

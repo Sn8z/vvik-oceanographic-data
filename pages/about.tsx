@@ -4,7 +4,7 @@ export default function About({ planets }: any) {
             <h1>Planets</h1>
             <p>{ JSON.stringify(planets) }</p>
             {planets.map((planet: any) => (
-                <p>{ planet.name }</p>
+                <p key={planet.name} >{ planet.name }</p>
             ))}
         </>
     )

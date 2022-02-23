@@ -5,7 +5,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
   return (
     <footer className={styles.footer}>
-      Made by <Link href="/"><a>Marcus "Sn8z" Sneitz</a></Link> { currentYear }
+      Made by <Link href="/"><a>Marcus Sneitz</a></Link> { currentYear }
     </footer>
   )
 }
